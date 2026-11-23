@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Study<span>AI</span></div>
+    <p>Your intelligent study companion</p>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Plan smarter.<br>Study better. 🎓</h1>
+      <p>Let AI organize your subjects and create your personalized study plan.</p>
+    </section>
+
+    <section class="card">
+      <h2>Add Your Subjects</h2>
+
+      <div class="form-grid">
+        <input type="text" id="subject" placeholder="Subject name">
+
+        <input type="number" id="hours" placeholder="Study hours" min="1" max="12">
+
+        <select id="difficulty">
+          <option value="">Select difficulty</option>
+          <option value="1">Easy</option>
+          <option value="2">Medium</option>
+          <option value="3">Hard</option>
+        </select>
+
+        <input type="date" id="examDate">
+      </div>
+
+      <button onclick="addSubject()">+ Add Subject</button>
+    </section>
+
+    <section class="card">
+      <h2>Your Subjects</h2>
+      <div id="subjectList">
+        <p class="empty">No subjects added yet.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>AI Study Plan</h2>
+      <p class="subtext">Your plan is prioritized by difficulty and exam date.</p>
+      <button class="generate" onclick="generatePlan()">✨ Generate Smart Plan</button>
+      <div id="plan"></div>
+    </section>
+
+    <section class="card">
+      <h2>Study Progress</h2>
+      <div class="progress-info">
+        <span id="progressText">0% Completed</span>
+        <span id="sessionText">0 / 0 sessions</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for students | StudyAI</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
